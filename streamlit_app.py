@@ -51,7 +51,6 @@ import requests
 #st.text(smoothiefroot_response.json())
 #sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
   
-    if time_to_insert:
-        session.sql(my_insert_stmt).collect()
-
-        st.success('Your Smoothie is ordered!', icon="✅")
+if time_to_insert:
+  session.sql(my_insert_stmt).collect()
+  st.success('Your Smoothie is ordered!', icon="✅")
