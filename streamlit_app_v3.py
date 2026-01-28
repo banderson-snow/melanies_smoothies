@@ -58,3 +58,7 @@ try:
             except Exception as e:
                 st.error(f"Failed to submit order: {str(e)}")
 
+except Exception as ex:
+    st.error(f"An error occurred: {str(ex)}")
+
+
