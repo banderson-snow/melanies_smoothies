@@ -44,13 +44,7 @@ try:
             except requests.exceptions.RequestException as e:
                 st.error(f"Failed to fetch details for {fruit_chosen}: {str(e)}")
 
-                else:
-                    st.warning(f"Failed to fetch details for {fruit_chosen}")
-            
-            except requests.exceptions.RequestException as e:
-                st.error(f"Failed to fetch details for {fruit_chosen}: {str(e)}")
-
-      # SQL statement to insert order into database (assuming proper handling of SQL injection risk)
+        # SQL statement to insert order into database (assuming proper handling of SQL injection risk)
         my_insert_stmt = """INSERT INTO smoothies.public.orders(ingredients, name_on_order)
                             VALUES ('{}', '{}')""".format(ingredients_string, name_on_order)
 
