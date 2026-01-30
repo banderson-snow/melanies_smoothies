@@ -1,8 +1,9 @@
 # Import python packages
 import streamlit as st
+import requests as pd
 #from snowflake.snowpark.context import get_active_session
 from snowflake.Snowpark.functions import col
-import requests as pd
+
 
 # Write directly to the app
 st.title(f":cup_with_straw: Customize Your Smoothie :cup_with_straw: {st.__version__}")
