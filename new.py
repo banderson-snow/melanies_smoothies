@@ -1,6 +1,6 @@
 # Import python packages
 import streamlit as st
-import pandas as pd_df
+import pandas as pd
 #from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 
@@ -22,7 +22,7 @@ session = cnx.session()
 ##st.dataframe(data=my_dataframe, use_container_width=True)
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME')),(col('SEARCH_ON'))
-st. dataframe (data=my_dataframe, use_container_width=True)
+st.dataframe (data=my_dataframe, use_container_width=True)
 #st.stop()
 
 pd_df=my_dataframe.to_pandas()
